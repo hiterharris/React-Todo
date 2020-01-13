@@ -1,12 +1,12 @@
 export const data = [
     {
         task: 'Grocery Store',
-        id: Date.now(),
+        id: 1,
         completed: false
     },
     {
         task: 'Gym',
-        id: Date.now(),        
-        completed: true
+        id: 2,        
+        completed: false
     }
 ];
