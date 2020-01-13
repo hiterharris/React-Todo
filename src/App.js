@@ -11,6 +11,22 @@ class App extends React.Component {
     }
   }
 
+  toggleComplete = id => {
+    const newList = this.state.list.map(item => {
+      if(item.id === id) {
+        return{
+          ...item,
+          completed: !item.completed
+        }
+      } else {
+        return item;
+      }
+    });
+    this.setState({
+      list: newList,
+    });
+  }
+
   addItem = taskName => {
     const newTask = {
       task: taskName,
@@ -27,8 +43,7 @@ class App extends React.Component {
       <div>
         <h2>To Do</h2>
         <TodoForm addItem={this.addItem} />
-        <button>Clear All</button>
-        <TodoList list={this.state.list} />
+        <TodoList list={this.state.list} toggleComplete={this.toggleComplete} />
       </div>
     );
   }

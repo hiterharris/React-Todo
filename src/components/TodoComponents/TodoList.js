@@ -6,12 +6,9 @@ class TodoList extends React.Component {
     return (
       <div>
         {this.props.list.map((item, i) => {
-          return (
-            <div key={i}>
-                <Todo item={item} />
-            </div>
-          );
+          return <Todo key={i} item={item} toggleComplete={this.props.toggleComplete} />;
         })}
+        <button>Clear All</button>
       </div>
     );
   }

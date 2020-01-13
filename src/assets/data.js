@@ -7,6 +7,6 @@ export const data = [
     {
         task: 'Gym',
         id: Date.now(),        
-        completed: false
+        completed: true
     }
 ];
