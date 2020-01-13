@@ -28,17 +28,10 @@ class App extends React.Component {
   }
 
   removeCompleted = () => {
-    const removeTask = this.state.list.filter(item => {
-      if(item.completed === true) {
-        return '';
-      } else {
-        return item;
-      }
-    });
     this.setState({
-      list: [...this.state.list, removeTask]
+      list: this.state.list.filter(item => !item.completed)
     });
-  }
+  };
 
   addItem = taskName => {
     const newTask = {
@@ -55,8 +48,8 @@ class App extends React.Component {
     return (
       <div>
         <h2>To Do</h2>
-        <TodoForm addItem={this.addItem} />
-        <TodoList list={this.state.list} toggleComplete={this.toggleComplete} removeCompleted={this.removeCompleted} />
+        <TodoForm addItem={this.addItem} removeCompleted={this.removeCompleted} />
+        <TodoList list={this.state.list} toggleComplete={this.toggleComplete} />
       </div>
     );
   }
