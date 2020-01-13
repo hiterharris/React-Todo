@@ -1,5 +1,5 @@
 import React from 'react';
-import './Todo.css';
+import '../../App.css'
 
 class Todo extends React.Component {
   render() {

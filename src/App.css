@@ -1,0 +1,30 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TodoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TodoForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TodoForm button {
+    margin: 5%;
+}
+
+.complete {
+    color: green;
+    text-decoration: line-through;
+}
+
+.incomplete {
+    color: red;
+}
