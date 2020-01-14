@@ -8,7 +8,7 @@ class Todo extends React.Component {
             className={`${this.props.item.completed ? "complete" : "incomplete"}`}
             onClick={() => this.props.toggleComplete(this.props.item.id)}
             >
-            <p>{this.props.item.task}</p>
+            <h2 className='todo-item'>{this.props.item.task}</h2>
         </div>
     );
   }
